@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+  
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+body{
+    background-color: #3D0000;
+    /*background-color: rgb(255, 157, 45);*/
+    background-image: url(img/bg2.png);
+    background-size: 90%;
+    background-position: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#contenedor{
+    width: 1270px;
+    background-color: #ECDBBA;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 35px black;
+}
+
+#titulo{
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    letter-spacing: 1px;
+    color: black;
+    background-image: url(img/bg4.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ab3b38;
+}
+
+#navidad{
+    width: 1270px;
+    height: 100px;
+    background-image: url(img/xmas.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+#links{
+    width: 100%;
+    background-color: #ab3b38;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 7px 7px 0 0;
+}
+
+.enlace{
+    width: 25px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.enlace_img{
+    width: inherit;
+    display: inline;
+}
+
+#yo{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+h2{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 40px;
+}
+
+#yo_img{
+    width: 25%;
+    border-radius: 20px;
+    border: 1px solid black;
+    pointer-events: none;
+}
+
+#yo_info{
+    width: 25%;
+    background-color: rgb(235 235 235 / 50%);
+    border-radius: 20px;
+    text-align: justify;
+    padding: 2.5%;
+}
+
+#musica{
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.song{
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-radius: 7px;
+    box-shadow: 0 0 6px rgb(36, 36, 36);
+}
+
+.song_img{
+    width: 50%;
+    border-radius: 7px 0 0 7px;
+    pointer-events: none;
+}
+
+.song_info{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: rgb(235 235 235 / 50%);
+    border-radius: 0 7px 7px 0;
+}
+
+.song_info h3{
+    width: 100%;
+    text-align: center;
+}
+
+.page_link{
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+.song_links{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#prox{
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.song_header{
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    pointer-events: none;
+}
+
+.img_cont{
+    width: 100%;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.song_name{
+    padding-top: 15px;
+}
+
+.iframe{
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+
+.link {
+    width: 50%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.link_icon {
+    width: 13%;
+    border-radius: 7px 0 0 7px;
+    display: inline;
+}
+
+.link_icon:hover ~ .link_name{
+    background-color: rgb(99, 99, 99);
+    transition: background-color 150ms ease-in-out;
+}
+
+.link_name {
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    border-radius: 0 7px 7px 0;
+    display: flex;
+    align-items: center;
+    transition: background-color 150ms ease-in-out;
+}
+
+.link_name:hover{
+    background-color: rgb(99, 99, 99);
+    transition: background-color 150ms ease-in-out;
+}
+
+.stream_link {
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+#botonSubir{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 150ms ease-in-out;
+}
+
+#botonSubir:hover {
+    background-color: rgb(12, 12, 12);
+    transition: background-color 150ms ease-in-out;
+}
+
+.disclaimer{
+    display: none;
+}
+
+.iframe{
+    width: 560px;
+    height: 315px;
+}
+
+div a img{
+    display: none;
+}
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#playlist{
+    border-radius:12px;
+    box-shadow: 0 0 6px rgb(0, 0, 0);
+    width: 60%;
+    height: 380px;
+}
+
+#banner{
+    margin-top: 30px;
+    width: 100%;
+    height: 222px;
+    background-image: url("img/YT banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 769px) {
+    #yo{
+        flex-direction: column;
+    }
+
+    #yo_img{
+        width: 35%;
+    }
+
+    #yo_info{
+        margin-top: 10px;
+        width: 73%;
+    }
+
+    .song_info{
+        width: 70%;
+    }
+
+    .link_icon{
+        width: 10%;
+        min-width: 16%;
+    }
+
+    .iframe{
+        width: 280px;
+        height: 158px;
+    }
+
+    #titulo a{
+        font-size: 0.9em;
+    }
+
+    #contenedor{
+        width: 100%;
+    }
+
+    #prox{
+        font-size: 1.5em;
+    }
+
+    .song_header{
+        width: 30%;
+    }
+
+    #botonSubir{
+        bottom: 49px;
+        right: 16px;
+    }
+
+    #titulo{
+        font-size: 1.8em;
+    }
+
+    #navidad{
+        width: 100%;
+        height: 95px;
+    }
+
+    #snow{
+        width: 100%;
+    }
+
+    .song{
+        width: 70%;
+    }
+
+    .link{
+        width: 65%;
+    }
+
+    #playlist{
+        width: 80%;
+    }
+
+    #navidad{
+        display: none;
+    }
+
+    #disp{
+        display: none;
+    }
+
+    .song_links{
+        display: none;
+    }
+
+    #banner{
+        height: 100px;
+    }
+}
